@@ -790,11 +790,15 @@ body.inq-open .wa-float {
 .inq-panel {
   position: relative;
   width: min(92vw, 660px);
-  max-height: 86vh;
+  /* svh: sized against the SMALL viewport so iOS Safari's URL bar never clips it */
+  max-height: min(86vh, 84svh);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
   background: var(--color-usiku);
   border: 1px solid color-mix(in srgb, var(--color-nuru) 16%, transparent);
   padding: clamp(1.8rem, 4vw, 3rem);
+  padding-bottom: calc(clamp(1.8rem, 4vw, 3rem) + env(safe-area-inset-bottom, 0px));
   opacity: 0;
   transform: translateY(34px);
 }
