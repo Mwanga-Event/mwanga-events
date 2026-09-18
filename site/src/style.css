@@ -716,8 +716,9 @@ html {
 .wa-float {
   position: fixed;
   right: clamp(16px, 3vw, 32px);
-  bottom: clamp(16px, 3vw, 32px);
+  bottom: calc(clamp(16px, 3vw, 32px) + env(safe-area-inset-bottom, 0px));
   z-index: 45;
+  opacity: 1;
   height: 48px;
   padding-inline: 13px;
   border-radius: 999px;
@@ -732,6 +733,15 @@ html {
 .wa-float:hover {
   border-color: var(--color-mwanga);
   background: color-mix(in srgb, var(--color-usiku) 94%, transparent);
+}
+/* step aside while the menu overlay or inquiry modal is open */
+body.menu-open .wa-float,
+body.inq-open .wa-float {
+  opacity: 0;
+  pointer-events: none;
+}
+.wa-float {
+  transition: border-color 0.4s, background 0.4s, opacity 0.35s;
 }
 .wa-float svg {
   width: 20px;

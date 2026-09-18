@@ -461,12 +461,14 @@ document.querySelectorAll('.faq-item').forEach((item) => {
     if (inqOpen) return
     inqOpen = true
     closeMenu()
+    document.body.classList.add('inq-open')
     inqTl.timeScale(1).play()
     lenis.stop()
   }
   function closeInq() {
     if (!inqOpen) return
     inqOpen = false
+    document.body.classList.remove('inq-open')
     inqTl.timeScale(1.4).reverse()
     lenis.start()
   }
