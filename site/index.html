@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mwanga Events · Lighting the Experience · Kampala</title>
+    <meta
+      name="description"
+      content="Mwanga Events is Kampala's premium LED visual and full-production events company: LED screens, sound, staging, live streaming and complete event management across East Africa."
+    />
+    <script>document.documentElement.classList.remove('no-js')</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preload" as="image" href="/img/work-lakeside-festival.jpg" fetchpriority="high" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div id="progress" aria-hidden="true"></div>
+    <!-- ═══════════ PRELOADER ═══════════ -->
+    <div id="preloader">
+      <div class="flex flex-col items-center gap-8">
+        <div id="preloader-mark" class="w-[140px] h-[140px] md:w-[180px] md:h-[180px]"></div>
+        <div class="flex flex-col items-center gap-3">
+          <span class="serif-display text-2xl tracking-[0.28em] indent-[0.28em]">MWANGA</span>
+          <span class="mono-meta text-mwanga" id="preloader-count">000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════ NAV ═══════════ -->
+    <header id="nav" class="fixed top-0 left-0 right-0 z-50">
+      <div class="container-x flex items-center justify-between h-[76px]">
+        <a href="#top" class="flex items-center gap-3.5 z-50 relative">
+          <span id="nav-mark" class="block w-9 h-9"></span>
+          <span class="flex flex-col leading-none">
+            <span class="serif-display text-[19px] tracking-[0.22em]">MWANGA</span>
+            <span class="mono-meta text-[8.5px] text-mwanga mt-1">EVENTS</span>
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-9" aria-label="Primary">
+          <a class="nav-link" href="#company">Company</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#work">Productions</a>
+          <a class="nav-link" href="#process">Process</a>
+        </nav>
+
+        <div class="flex items-center gap-7">
+          <span class="mono-meta hidden md:block text-nuru/50">
+            KAMPALA <span id="clock" class="text-nuru/80">--:--:--</span> EAT
+          </span>
+          <button type="button" class="btn-pill hidden sm:inline-flex" data-inquiry data-magnetic>
+            Start a project <span class="arr">→</span>
+          </button>
+          <button class="menu-btn lg:hidden z-50 relative p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- overlay menu (mobile) -->
+    <div id="menu-overlay" class="fixed inset-0 z-40 bg-usiku flex flex-col justify-end">
+      <nav class="container-x pb-24 flex flex-col gap-1" aria-label="Menu">
+        <a class="menu-link menu-item" href="#company"><span class="mono-meta text-mwanga mr-5 align-middle">01</span>Company</a>
+        <a class="menu-link menu-item" href="#services"><span class="mono-meta text-mwanga mr-5 align-middle">02</span>Services</a>
+        <a class="menu-link menu-item" href="#work"><span class="mono-meta text-mwanga mr-5 align-middle">03</span>Productions</a>
+        <a class="menu-link menu-item" href="#process"><span class="mono-meta text-mwanga mr-5 align-middle">04</span>Process</a>
+        <a class="menu-link menu-item" href="#contact"><span class="mono-meta text-mwanga mr-5 align-middle">05</span>Contact</a>
+      </nav>
+      <div class="container-x pb-10 hairline-t pt-8 menu-item">
+        <button type="button" class="btn-pill btn-pill--gold w-full mb-7" data-inquiry>Plan your event <span class="arr">→</span></button>
+        <div class="flex flex-wrap gap-x-10 gap-y-3">
+          <span class="mono-meta text-nuru/55">hello@mwangaevents.ug</span>
+          <span class="mono-meta text-nuru/55">+256 700 000 000</span>
+        </div>
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- ═══════════ HERO ═══════════ -->
+      <section class="relative min-h-svh flex flex-col justify-end overflow-hidden">
+        <div class="absolute inset-0">
+          <img
+            src="/img/work-lakeside-festival.jpg"
+            alt="Mwanga-branded festival mainstage at dusk: truss, LED walls, haze and a full crowd"
+            class="w-full h-full object-cover"
+            id="hero-img"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="absolute inset-0 hero-grade"></div>
+        </div>
+
+        <!-- the Nyota mark as atmosphere: a light phenomenon, not a second logo -->
+        <div
+          id="hero-mark"
+          class="hero-mark absolute left-1/2 top-[36%] -translate-x-1/2 -translate-y-1/2 w-[min(86vw,660px)] h-[min(86vw,660px)] opacity-35 mix-blend-screen"
+          aria-hidden="true"
+        ></div>
+
+        <div id="hero-content" class="relative container-x pb-[clamp(3rem,8vh,6rem)] text-center">
+          <h1 class="hero-title" id="hero-title">MWANGA</h1>
+          <p class="serif-display italic text-[clamp(1.3rem,2.7vw,2rem)] text-nuru/90 max-w-xl mx-auto mt-6 hero-content-shadow" data-hero-fade>
+            Lighting the experience.
+          </p>
+          <p class="mono-meta text-nuru/55 mt-6 hero-content-shadow" data-hero-fade>Kampala · Est. 2026 · East Africa</p>
+          <div class="sm:hidden mt-9" data-hero-fade>
+            <button type="button" class="btn-pill w-full" data-inquiry>Plan your event <span class="arr">→</span></button>
+          </div>
+          <div class="mt-10 flex flex-col items-center gap-4" data-hero-fade>
+            <span class="mono-meta text-nuru/45 text-[10px]">Scroll</span>
+            <span class="scroll-cue-line"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ MARQUEE ═══════════ -->
+      <div class="hairline-t hairline-b py-6 marquee" aria-hidden="true">
+        <div class="marquee-track" id="marquee-a"></div>
+        <div class="marquee-track" id="marquee-b"></div>
+      </div>
+
+      <!-- ═══════════ 01 COMPANY / MANIFESTO ═══════════ -->
+      <section id="company" class="on-light bg-nuru text-ink section-pad">
+        <div class="container-x">
+          <div class="section-head mb-[clamp(3rem,6vw,5.5rem)]">
+            <span class="mono-meta">01 / The company</span>
+            <span class="mono-meta text-ink/55 hidden sm:block">Mwanga · Swahili · “light”</span>
+          </div>
+
+          <h2 class="serif-display text-[clamp(2.6rem,6vw,6.9rem)] leading-[1.05] max-w-[18ch]" data-split>
+            We build the technical backbone of world-class live experiences.
+          </h2>
+
+          <div class="grid md:grid-cols-12 gap-x-10 gap-y-8 mt-[clamp(2.5rem,5vw,4.5rem)]">
+            <p class="md:col-span-4 md:col-start-5 text-[18px] leading-[1.65] text-ink/75 max-w-[38ch]" data-reveal>
+              Mwanga is Swahili for light, a word understood across Uganda, Kenya, Tanzania and Rwanda. It is what we bring to every stage we touch: image, sound and production quality without compromise.
+            </p>
+            <p class="md:col-span-4 text-[18px] leading-[1.65] text-ink/75 max-w-[38ch]" data-reveal>
+              LED, sound and staging, starting in Uganda and scaling across East Africa. One team owns the technical outcome of your event, so the moment lands exactly the way it was imagined.
+            </p>
+          </div>
+
+          <!-- capability strip · DEMO FIGURES: confirm every number with the client before launch -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 mt-[clamp(3.5rem,7vw,6.5rem)] border-t border-ink/15">
+            <div class="pt-8 pb-4 pr-6 border-b border-ink/10 lg:border-b-0" data-reveal>
+              <p class="mono-meta text-ink/60 mb-3">LED</p>
+              <div class="stat-num">400m²</div>
+              <p class="mono-meta text-ink/60 mt-3">Screen inventory</p>
+            </div>
+            <div class="pt-8 pb-4 pr-6 border-b border-ink/10 lg:border-b-0" data-reveal>
+              <p class="mono-meta text-ink/60 mb-3">Broadcast</p>
+              <div class="stat-num">4K/60</div>
+              <p class="mono-meta text-ink/60 mt-3">Signal workflows</p>
+            </div>
+            <div class="pt-8 pb-4 pr-6" data-reveal>
+              <p class="mono-meta text-ink/60 mb-3">Deployment</p>
+              <div class="stat-num">24hr</div>
+              <p class="mono-meta text-ink/60 mt-3">Response, anywhere in Uganda</p>
+            </div>
+            <div class="pt-8 pb-4" data-reveal>
+              <p class="mono-meta text-ink/60 mb-3">Markets</p>
+              <div class="serif-display text-[clamp(2rem,3.4vw,3.2rem)] leading-none pt-[0.35em]">East Africa</div>
+              <p class="mono-meta text-ink/60 mt-3">Uganda · Kenya · Tanzania · Rwanda</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ 02 SERVICES ═══════════ -->
+      <section id="services" class="section-pad">
+        <div class="container-x">
+          <div class="section-head mb-[clamp(2rem,4vh,3rem)]">
+            <span class="mono-meta text-nuru/80">02 / What we do</span>
+            <span class="mono-meta text-nuru/40 hidden sm:block">Five disciplines · one outcome</span>
+          </div>
+
+          <h2 class="serif-display text-[clamp(2.1rem,4.4vw,3.8rem)] max-w-[22ch] mb-[clamp(2.5rem,6vh,4.5rem)]" data-split>
+            Every discipline carries its own mark, <em class="text-mwanga not-italic font-normal" style="font-style:italic">drawn from light itself.</em>
+          </h2>
+
+          <div id="services-list"><!-- rows injected by main.js --></div>
+
+          <!-- spec sheet: the numbers planners come back to check -->
+          <div class="mt-[clamp(3.5rem,8vh,6rem)]" data-reveal id="spec-sheet">
+            <!-- DEMO FIGURES: confirm every spec with the client before launch -->
+            <div class="flex items-baseline justify-between pb-4 hairline-b">
+              <span class="mono-meta text-mwanga">Spec sheet</span>
+              <span class="mono-meta text-nuru/40 hidden sm:block">Key numbers, on request in full</span>
+            </div>
+            <div class="grid grid-cols-2 lg:grid-cols-4">
+              <div class="pt-7 pr-6 pb-2">
+                <p class="mono-meta text-nuru/45 mb-3">LED panels</p>
+                <p class="serif-display text-[clamp(1.3rem,2vw,1.7rem)]">P2.6 / P3.9 / P4.8</p>
+                <p class="mono-meta text-nuru/45 mt-2.5">Indoor + IP65 outdoor · 5,500 nit</p>
+              </div>
+              <div class="pt-7 pr-6 pb-2">
+                <p class="mono-meta text-nuru/45 mb-3">Processing</p>
+                <p class="serif-display text-[clamp(1.3rem,2vw,1.7rem)]">4K / 60fps</p>
+                <p class="mono-meta text-nuru/45 mt-2.5">Redundant send · live camera input</p>
+              </div>
+              <div class="pt-7 pr-6 pb-2">
+                <p class="mono-meta text-nuru/45 mb-3">Power</p>
+                <p class="serif-display text-[clamp(1.3rem,2vw,1.7rem)]">3-phase distro</p>
+                <p class="mono-meta text-nuru/45 mt-2.5">Silent generators for remote sites</p>
+              </div>
+              <div class="pt-7 pb-2">
+                <p class="mono-meta text-nuru/45 mb-3">Rigging</p>
+                <p class="serif-display text-[clamp(1.3rem,2vw,1.7rem)]">Flown + stacked</p>
+                <p class="mono-meta text-nuru/45 mt-2.5">Certified truss · curved builds</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- floating preview for service rows -->
+      <div id="service-preview">
+        <img src="/img/concert-blue.jpg" alt="" data-preview="led" />
+        <img src="/img/stage-crowd.jpg" alt="" data-preview="production" />
+        <img src="/img/dj-set.jpg" alt="" data-preview="streaming" />
+        <img src="/img/spotlight.jpg" alt="" data-preview="branding" />
+        <img src="/img/decor.jpg" alt="" data-preview="management" />
+      </div>
+
+      <!-- ═══════════ 03 WORK ═══════════ -->
+      <section id="work" class="section-pad hairline-t">
+        <div class="container-x">
+          <div class="section-head mb-[clamp(3rem,7vh,5.5rem)]">
+            <span class="mono-meta text-nuru/80">03 / Selected production concepts</span>
+            <span class="mono-meta text-nuru/55 hidden sm:block">Production scenarios</span>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-x-10 gap-y-[clamp(3.5rem,8vh,6rem)]">
+            <a class="work-card md:col-span-7" href="#contact" data-reveal>
+              <div class="work-media aspect-[16/10]" data-parallax>
+                <img src="/img/work-lakeside-festival.jpg" alt="Festival mainstage production at sunset on the Jinja lakeside" loading="lazy" />
+              </div>
+              <div class="flex items-baseline justify-between mt-5 pb-3">
+                <h3 class="work-title"><span class="mono-meta text-mwanga mr-4 align-middle">P·01</span>Lakeside Festival Mainstage</h3>
+                <span class="mono-meta text-nuru/45 shrink-0 ml-6">Jinja · LED + FOH</span>
+              </div>
+              <div class="hairline-b pb-4"><p class="mono-meta text-nuru/55">5,000+ guests · 3-day build · 12-person crew</p></div>
+            </a>
+            <a class="work-card md:col-span-5 md:mt-[18vh]" href="#contact" data-reveal>
+              <div class="work-media aspect-[4/5]" data-parallax>
+                <img src="/img/work-arena-concert.jpg" alt="Live concert production inside Lugogo Indoor Arena" loading="lazy" />
+              </div>
+              <div class="flex items-baseline justify-between mt-5 pb-3">
+                <h3 class="work-title"><span class="mono-meta text-mwanga mr-4 align-middle">P·02</span>Arena Concert Series</h3>
+                <span class="mono-meta text-nuru/45 shrink-0 ml-6">Lugogo · Full production</span>
+              </div>
+              <div class="hairline-b pb-4"><p class="mono-meta text-nuru/55">8,000 capacity · 240m² LED · 18-person crew</p></div>
+            </a>
+            <a class="work-card md:col-span-5 md:-mt-[6vh]" href="#contact" data-reveal>
+              <div class="work-media aspect-[4/5]" data-parallax>
+                <img src="/img/work-product-launch.jpg" alt="Corporate product launch gala at Kampala Serena Hotel" loading="lazy" />
+              </div>
+              <div class="flex items-baseline justify-between mt-5 pb-3">
+                <h3 class="work-title"><span class="mono-meta text-mwanga mr-4 align-middle">P·03</span>Product Launch, Serena</h3>
+                <span class="mono-meta text-nuru/45 shrink-0 ml-6">Kampala · Brand + AV</span>
+              </div>
+              <div class="hairline-b pb-4"><p class="mono-meta text-nuru/55">400 guests · timed reveal cue · 4K broadcast</p></div>
+            </a>
+            <a class="work-card md:col-span-7 md:mt-[10vh]" href="#contact" data-reveal>
+              <div class="work-media aspect-[16/10]" data-parallax>
+                <img src="/img/work-summit-broadcast.jpg" alt="Live broadcast production of the Nile Basin Summit panel" loading="lazy" />
+              </div>
+              <div class="flex items-baseline justify-between mt-5 pb-3">
+                <h3 class="work-title"><span class="mono-meta text-mwanga mr-4 align-middle">P·04</span>Nile Basin Summit Broadcast</h3>
+                <span class="mono-meta text-nuru/45 shrink-0 ml-6">Munyonyo · Stream + LED</span>
+              </div>
+              <div class="hairline-b pb-4"><p class="mono-meta text-nuru/55">3-day summit · 6-camera broadcast · redundant uplinks</p></div>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══════════ OUR STANDARD ═══════════ -->
+      <section class="hairline-t strip-pad" aria-label="Our standard">
+        <div class="container-x grid md:grid-cols-12 gap-10">
+          <div class="md:col-span-3">
+            <span class="mono-meta text-nuru/55">Our standard</span>
+          </div>
+          <div class="md:col-span-9">
+            <p class="serif-display text-[clamp(1.7rem,3.8vw,3.2rem)] leading-[1.2] max-w-[26ch]" data-split>
+              Sound check is not when the client arrives. It is when the room is still empty.
+            </p>
+            <p class="mono-meta text-mwanga mt-8" data-reveal>The production principle</p>
+            <p class="text-[15.5px] leading-[1.7] text-nuru/70 max-w-[52ch] mt-3" data-reveal>
+              Every show is tested before the pressure begins: signal paths proven, redundancy live, content colour-matched on the actual panels, hours before doors.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ 04 PROCESS / ONE NIGHT IN ORDER ═══════════ -->
+      <section id="process" class="section-pad hairline-t">
+        <div class="container-x mb-[clamp(3rem,7vh,5rem)]">
+          <div class="section-head mb-[clamp(2rem,4vh,3rem)]">
+            <span class="mono-meta text-nuru/80">04 / How a night unfolds</span>
+            <span class="mono-meta text-nuru/40 hidden sm:block">The palette is one night, in order</span>
+          </div>
+          <h2 class="serif-display text-[clamp(2.1rem,4.4vw,3.8rem)] max-w-[24ch]" data-split>
+            Four phases. Four colours. Nothing left to chance.
+          </h2>
+        </div>
+
+        <div class="night-panels hairline-t hairline-b" data-reveal>
+          <div class="night-panel bg-usiku text-nuru" style="border-right:1px solid color-mix(in srgb,#f4f1ea 10%,transparent)">
+            <div>
+              <span class="mono-meta text-nuru/45">Phase 01 · #0B0907</span>
+              <h3 class="np-name mt-4">Usiku</h3>
+              <p class="mono-meta text-mwanga mt-2">Before the doors</p>
+            </div>
+            <p class="np-body text-[14.5px] leading-[1.7] text-nuru/70">
+              Site survey, power plan, rigging plots, signal paths. The show is won in the dark, days before anyone arrives.
+            </p>
+          </div>
+          <div class="night-panel bg-jua text-nuru">
+            <div>
+              <span class="mono-meta text-nuru/60">Phase 02 · #B2471E</span>
+              <h3 class="np-name mt-4">Jua</h3>
+              <p class="mono-meta text-usiku/70 mt-2">The room warms</p>
+            </div>
+            <p class="np-body text-[14.5px] leading-[1.7] text-nuru/85">
+              Build day. Truss up, walls flown, line arrays tuned, content loaded and colour-matched to the millimetre.
+            </p>
+          </div>
+          <div class="night-panel bg-mwanga text-usiku">
+            <div>
+              <span class="mono-meta text-usiku/60">Phase 03 · #D9A227</span>
+              <h3 class="np-name mt-4">Mwanga</h3>
+              <p class="mono-meta text-usiku/70 mt-2">The moment</p>
+            </div>
+            <p class="np-body text-[14.5px] leading-[1.7] text-usiku/80">
+              Showtime. Operators on every desk, redundancy on every path. The audience sees only light, never the machinery.
+            </p>
+          </div>
+          <div class="night-panel bg-nuru text-ink">
+            <div>
+              <span class="mono-meta text-ink/45">Phase 04 · #F4F1EA</span>
+              <h3 class="np-name mt-4">Nuru</h3>
+              <p class="mono-meta text-jua mt-2">What they keep</p>
+            </div>
+            <p class="np-body text-[14.5px] leading-[1.7] text-ink/70">
+              Strike, debrief, delivery. The stream archive, the aftermovie, the numbers. Everything your brand keeps after the lights fade.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════ 05 HOW WE DELIVER ═══════════ -->
+      <section id="delivery" class="section-pad hairline-t">
+        <div class="container-x">
+          <div class="section-head mb-[clamp(2.5rem,5vw,4rem)]">
+            <span class="mono-meta text-nuru/80">05 / How we deliver</span>
+            <span class="mono-meta text-nuru/55 hidden sm:block">Brief to strike · one team</span>
+          </div>
+          <h2 class="serif-display text-[clamp(2rem,4.2vw,3.6rem)] max-w-[22ch] mb-[clamp(2.5rem,5vw,4.5rem)]" data-split>
+            From brief to strike, without drama.
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-t border-nuru/15">
+            <div class="pt-7 pr-6 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">01</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Brief</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Requirements, audience, venue, technical scope</p>
+            </div>
+            <div class="pt-7 pr-6 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">02</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Design</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Stage, screens, audio, lighting, power</p>
+            </div>
+            <div class="pt-7 pr-6 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">03</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Pre-production</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Site visit, drawings, run-of-show, testing</p>
+            </div>
+            <div class="pt-7 pr-6 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">04</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Build</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Rigging, LED, FOH, rehearsal</p>
+            </div>
+            <div class="pt-7 pr-6 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">05</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Show</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Live operation, redundancy on every path</p>
+            </div>
+            <div class="pt-7 pb-6" data-reveal>
+              <p class="mono-meta text-mwanga mb-4">06</p>
+              <h3 class="serif-display text-[clamp(1.3rem,1.9vw,1.7rem)] mb-3">Strike</h3>
+              <p class="mono-meta text-nuru/55 normal-case tracking-[0.04em] leading-[1.9]">Pack-out, handover, debrief</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ 06 FAQ ═══════════ -->
+      <section id="faq" class="section-pad hairline-t">
+        <div class="container-x">
+          <div class="section-head mb-[clamp(2.5rem,5vh,4rem)]">
+            <span class="mono-meta text-nuru/80">06 / Good to know</span>
+            <span class="mono-meta text-nuru/40 hidden sm:block">What planners ask us first</span>
+          </div>
+          <div class="grid md:grid-cols-12 gap-10">
+            <h2 class="serif-display text-[clamp(1.9rem,3.6vw,3rem)] md:col-span-4 max-w-[14ch]" data-split>
+              Ask us anything. Here is a head start.
+            </h2>
+            <div class="md:col-span-8" data-reveal>
+              <div class="faq-item hairline-t">
+                <button type="button" class="faq-q"><h3>How far in advance should we book?</h3><span class="faq-icon">+</span></button>
+                <div class="faq-a"><p>Two to six weeks gives us time to survey the venue and design properly. For urgent dates we can deploy a standard LED and sound package anywhere in Uganda within 48 hours, subject to availability.</p></div>
+              </div>
+              <div class="faq-item hairline-t">
+                <button type="button" class="faq-q"><h3>Do you work outside Kampala?</h3><span class="faq-icon">+</span></button>
+                <div class="faq-a"><p>Yes. We cover all of Uganda and take productions across East Africa: Kenya, Tanzania, Rwanda and beyond. Transport, crew accommodation and customs handling are quoted upfront, with no surprises later.</p></div>
+              </div>
+              <div class="faq-item hairline-t">
+                <button type="button" class="faq-q"><h3>What about power at remote or outdoor sites?</h3><span class="faq-icon">+</span></button>
+                <div class="faq-a"><p>We bring our own: silent generators and 3-phase power distribution, sized for the rig with redundancy. A venue with nothing but a field is a normal Tuesday for us.</p></div>
+              </div>
+              <div class="faq-item hairline-t">
+                <button type="button" class="faq-q"><h3>Can the equipment handle rain?</h3><span class="faq-icon">+</span></button>
+                <div class="faq-a"><p>Our outdoor LED panels are IP65 rated and run through the rainy season. Mixing positions and processing are always covered, and every outdoor build carries a weather plan agreed with you in advance.</p></div>
+              </div>
+              <div class="faq-item hairline-t hairline-b">
+                <button type="button" class="faq-q"><h3>Do you make the content that runs on the screens?</h3><span class="faq-icon">+</span></button>
+                <div class="faq-a"><p>Yes. Motion design, sponsor loops, lower thirds and live multi-camera feeds, all built to your brand and colour-matched on the actual panels before doors open.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ CONTACT / CTA ═══════════ -->
+      <section id="contact" class="relative section-pad overflow-hidden hairline-t">
+        <div class="relative container-x text-center">
+          <p class="mono-meta text-mwanga mb-8" data-reveal>07 / Start the conversation</p>
+          <h2 class="serif-display text-[clamp(2.6rem,7vw,6.2rem)] max-w-[16ch] mx-auto" data-split>
+            Let’s light your next event.
+          </h2>
+          <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5" data-reveal>
+            <button type="button" class="btn-pill btn-pill--gold" data-inquiry data-magnetic>
+              Plan your event <span class="arr">→</span>
+            </button>
+            <a href="mailto:hello@mwangaevents.ug" class="btn-pill" data-magnetic>hello@mwangaevents.ug</a>
+            <a href="tel:+256700000000" class="btn-pill" data-magnetic>+256 700 000 000</a>
+          </div>
+          <p class="mono-meta text-nuru/40 mt-12" data-reveal>Kampala, Uganda · Serving all of East Africa</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="hairline-t">
+      <div class="container-x py-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+        <div>
+          <p class="mono-meta text-nuru/40 mb-5">Menu</p>
+          <ul class="space-y-2.5">
+            <li><a class="footer-link" href="#company">Company</a></li>
+            <li><a class="footer-link" href="#services">Services</a></li>
+            <li><a class="footer-link" href="#work">Productions</a></li>
+            <li><a class="footer-link" href="#process">Process</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-meta text-nuru/40 mb-5">Services</p>
+          <ul class="space-y-2.5">
+            <li><a class="footer-link" href="#services">LED Screen Hire</a></li>
+            <li><a class="footer-link" href="#services">Event Production</a></li>
+            <li><a class="footer-link" href="#services">Live Streaming</a></li>
+            <li><a class="footer-link" href="#services">Branding &amp; Setup</a></li>
+            <li><a class="footer-link" href="#services">Event Management</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-meta text-nuru/40 mb-5">Contact</p>
+          <ul class="space-y-2.5">
+            <li><a class="footer-link" href="mailto:hello@mwangaevents.ug">hello@mwangaevents.ug</a></li>
+            <li><a class="footer-link" href="tel:+256700000000">+256 700 000 000</a></li>
+            <li><span class="footer-link">Kampala, Uganda</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="mono-meta text-nuru/40 mb-5">Follow</p>
+          <ul class="space-y-2.5">
+            <li><a class="footer-link" href="#">Instagram</a></li>
+            <li><a class="footer-link" href="#">LinkedIn</a></li>
+            <li><a class="footer-link" href="#">X / Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container-x hairline-t py-6 flex flex-wrap items-center justify-between gap-4">
+        <span class="mono-meta text-nuru/35">© 2026 Mwanga Events Ltd</span>
+        <span class="mono-meta text-nuru/25 hidden md:block">0.3476° N, 32.5825° E</span>
+        <button id="to-top" class="mono-meta text-nuru/60 hover:text-mwanga transition-colors cursor-pointer">Back to top ↑</button>
+      </div>
+      <div class="overflow-hidden pt-4">
+        <div class="footer-word" id="footer-word">MWANGA</div>
+      </div>
+    </footer>
+
+    <!-- ═══════════ INQUIRY MODAL ═══════════ -->
+    <div id="inquiry" role="dialog" aria-modal="true" aria-label="Plan your event">
+      <div class="inq-backdrop"></div>
+      <div class="inq-panel">
+        <button type="button" class="inq-close" aria-label="Close">×</button>
+        <p class="mono-meta text-mwanga mb-2">Plan your event · <span id="inq-stepnum">Step 01 / 03</span></p>
+        <div class="h-px bg-nuru/15 mb-7 relative overflow-hidden">
+          <div id="inq-bar" class="absolute inset-y-0 left-0 bg-mwanga w-1/3 transition-all duration-500"></div>
+        </div>
+
+        <div class="inq-step active" data-step="1">
+          <h3 class="inq-title mb-7">What are we lighting?</h3>
+          <div class="flex flex-wrap gap-3">
+            <button type="button" class="choice" data-type="Concert / Festival">Concert / Festival</button>
+            <button type="button" class="choice" data-type="Corporate / Launch">Corporate / Launch</button>
+            <button type="button" class="choice" data-type="Conference / Summit">Conference / Summit</button>
+            <button type="button" class="choice" data-type="Wedding / Private">Wedding / Private</button>
+            <button type="button" class="choice" data-type="Something else">Something else</button>
+          </div>
+          <div class="flex justify-end mt-9">
+            <button type="button" class="btn-pill" data-next>Next <span class="arr">→</span></button>
+          </div>
+        </div>
+
+        <div class="inq-step" data-step="2">
+          <h3 class="inq-title mb-7">What do you need from us?</h3>
+          <div class="flex flex-wrap gap-3 mb-9">
+            <button type="button" class="choice" data-svc="LED Screens">LED Screens</button>
+            <button type="button" class="choice" data-svc="Sound + Production">Sound + Production</button>
+            <button type="button" class="choice" data-svc="Live Streaming">Live Streaming</button>
+            <button type="button" class="choice" data-svc="Branding + Setup">Branding + Setup</button>
+            <button type="button" class="choice" data-svc="Full Management">Full Management</button>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+            <div>
+              <label class="mono-meta text-nuru/45 block mb-1" for="inq-date">Event date (rough is fine)</label>
+              <input class="inq-input" id="inq-date" type="text" placeholder="e.g. 14 Dec 2026" />
+            </div>
+            <div>
+              <label class="mono-meta text-nuru/45 block mb-1" for="inq-city">Where is it happening?</label>
+              <input class="inq-input" id="inq-city" type="text" placeholder="e.g. Kampala, Munyonyo" />
+            </div>
+          </div>
+          <div class="flex justify-between mt-9">
+            <button type="button" class="btn-pill" data-back>← Back</button>
+            <button type="button" class="btn-pill" data-next>Next <span class="arr">→</span></button>
+          </div>
+        </div>
+
+        <div class="inq-step" data-step="3">
+          <h3 class="inq-title mb-7">Where do we reach you?</h3>
+          <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6 mb-8">
+            <div>
+              <label class="mono-meta text-nuru/45 block mb-1" for="inq-name">Your name</label>
+              <input class="inq-input" id="inq-name" type="text" placeholder="Name" />
+            </div>
+            <div>
+              <label class="mono-meta text-nuru/45 block mb-1" for="inq-phone">Phone / WhatsApp</label>
+              <input class="inq-input" id="inq-phone" type="tel" placeholder="+256 ..." />
+            </div>
+          </div>
+          <div class="inq-summary mb-9" id="inq-summary"></div>
+          <div class="flex flex-wrap justify-between gap-4">
+            <button type="button" class="btn-pill" data-back>← Back</button>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" target="_blank" rel="noopener" class="btn-pill btn-pill--gold" id="inq-wa">Send on WhatsApp <span class="arr">→</span></a>
+              <a href="#" class="btn-pill" id="inq-mail">Send by email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp float -->
+    <a
+      href="https://wa.me/256700000000?text=Hello%20Mwanga%20Events!%20I%27d%20like%20to%20talk%20about%20an%20event."
+      target="_blank"
+      rel="noopener"
+      class="wa-float"
+      aria-label="Chat with us on WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.04 2.67c-7.34 0-13.3 5.96-13.3 13.3 0 2.35.62 4.64 1.79 6.66L2.67 29.4l6.96-1.83a13.26 13.26 0 0 0 6.4 1.63h.01c7.33 0 13.3-5.96 13.3-13.3 0-3.55-1.39-6.89-3.9-9.4a13.22 13.22 0 0 0-9.4-3.87zm0 24.28h-.01c-1.98 0-3.93-.53-5.63-1.54l-.4-.24-4.13 1.08 1.1-4.02-.26-.41a11.05 11.05 0 0 1-1.7-5.9c0-6.1 4.97-11.06 11.08-11.06 2.96 0 5.73 1.15 7.82 3.24a10.99 10.99 0 0 1 3.24 7.83c0 6.1-4.97 11.06-11.07 11.06zm6.07-8.28c-.33-.17-1.97-.97-2.27-1.08-.3-.11-.53-.17-.75.17-.22.33-.86 1.08-1.05 1.3-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.65-1.97-1.85-2.3-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.42-.03-.58-.08-.17-.75-1.8-1.02-2.47-.27-.65-.54-.56-.75-.57l-.64-.01c-.22 0-.58.08-.89.42-.3.33-1.16 1.13-1.16 2.77 0 1.63 1.19 3.21 1.36 3.43.17.22 2.35 3.58 5.69 5.03.8.34 1.42.55 1.9.7.8.26 1.53.22 2.1.13.64-.09 1.97-.8 2.25-1.58.28-.78.28-1.44.19-1.58-.08-.14-.3-.22-.63-.39z"/></svg>
+      <span class="wa-label">Talk to production</span>
+    </a>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
